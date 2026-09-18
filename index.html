@@ -10,46 +10,36 @@
     *{box-sizing:border-box}
     body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.45}
     main{max-width:1180px;margin:0 auto;padding:48px 24px 64px}
-    .intro{text-align:center;max-width:760px;margin:0 auto 32px}
+    .intro{text-align:center;max-width:780px;margin:0 auto 32px}
     .intro h1{font-size:clamp(28px,4vw,44px);margin:0 0 14px}
     .intro p{font-size:18px;color:#333;margin:0}
-    .spread{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start;margin-top:36px}
-    .book-page{background:var(--paper);border:1px solid var(--line);box-shadow:0 12px 35px rgba(0,0,0,.08);aspect-ratio:210/297;width:100%;position:relative;overflow:hidden}
-
-    .cover{display:flex;flex-direction:column;justify-content:center;text-align:center;padding:8% 8.5%}
-    .cover .kicker{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-bottom:22px}
-    .cover h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(34px,3.6vw,50px);font-weight:700;line-height:1.04;margin:0 0 22px;text-transform:uppercase}
-    .cover .subtitle{font-size:16px;line-height:1.35;max-width:390px;margin:0 auto 48px}
-    .cover .author{font-size:13px;letter-spacing:.09em;text-transform:uppercase}
-
-    .back{padding:5.8% 6.3%;font-size:10px;line-height:1.23}
-    .back h3{font-family:Georgia,"Times New Roman",serif;font-size:20px;line-height:1.12;margin:0 0 10px}
-    .back ul{list-style:none;padding:0;margin:0 0 8px}
-    .back li{margin:0 0 4px;padding-left:17px;position:relative}
-    .back li::before{content:"✓";position:absolute;left:0;top:0;font-weight:700}
-    .back strong{font-size:10.2px}
-    .back .not h4{font-size:13px;line-height:1.15;margin:9px 0 6px}
+    .spread{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch;margin-top:36px}
+    .book-page{background:var(--paper);border:1px solid var(--line);box-shadow:0 12px 35px rgba(0,0,0,.08);min-height:760px;padding:56px 46px;position:relative}
+    .cover{display:flex;flex-direction:column;justify-content:center;text-align:center}
+    .cover .kicker{font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:28px}
+    .cover h2{font-size:clamp(38px,5vw,64px);line-height:1.02;margin:0 0 28px;text-transform:uppercase}
+    .cover .subtitle{font-size:22px;max-width:460px;margin:0 auto 60px}
+    .cover .author{font-size:18px;letter-spacing:.08em;text-transform:uppercase}
+    .back h3{font-size:28px;margin:0 0 22px}
+    .back ul{list-style:none;padding:0;margin:0 0 26px}
+    .back li{margin:0 0 15px;padding-left:28px;position:relative}
+    .back li::before{content:"✓";position:absolute;left:0;font-weight:700}
+    .back .not h4{font-size:18px;margin:26px 0 12px}
     .back .not li::before{content:"×"}
-    .closing{border-top:1px solid var(--line);margin:8px 0 0;padding-top:7px;font-size:10.2px;line-height:1.24;font-weight:700}
-
+    .closing{border-top:1px solid var(--line);padding-top:20px;font-weight:700}
     .cta{text-align:center;margin-top:36px}
-    .cta p{color:#333;margin:0 0 18px}
+    .cta p{color:#333;margin:0 auto 18px;max-width:760px}
     .cta a{display:inline-block;background:var(--accent);color:white;text-decoration:none;padding:15px 28px;border-radius:8px;font-weight:700;font-size:18px}
     .cta a:hover,.cta a:focus{opacity:.86}
-    .note{max-width:760px;margin:22px auto 0;text-align:center;color:var(--muted);font-size:14px}
-    @media (max-width:850px){
-      .spread{grid-template-columns:1fr;max-width:620px;margin-left:auto;margin-right:auto}
-      .cover h2{font-size:clamp(34px,9vw,50px)}
-      .back{font-size:clamp(9px,2.25vw,11px)}
-      .back strong{font-size:1.02em}
-    }
+    .note{max-width:780px;margin:22px auto 0;text-align:center;color:var(--muted);font-size:14px}
+    @media (max-width:850px){.spread{grid-template-columns:1fr}.book-page{min-height:auto}.cover{min-height:620px}}
   </style>
 </head>
 <body>
 <main>
   <section class="intro">
-    <h1>Avant de répondre</h1>
-    <p>Imaginez que vous découvrez ce livre aujourd’hui, sans autre explication. Regardez simplement sa couverture et sa quatrième de couverture, puis répondez spontanément au questionnaire.</p>
+    <h1>Bêta-test pour adultes débutants</h1>
+    <p>Vous avez peut-être découvert ce projet sur un forum, par un professeur ou par recommandation. Je cherche un petit groupe d’adultes francophones qui apprennent à lire les notes et qui acceptent de tester la méthode progressivement, avec des retours précis après chaque étape.</p>
   </section>
 
   <section class="spread" aria-label="Couverture et quatrième de couverture">
@@ -57,43 +47,35 @@
       <div class="kicker">Méthode pour adulte débutant</div>
       <h2>Je ne savais pas<br>lire la musique</h2>
       <p class="subtitle">Une méthode progressive pour apprendre le solfège à l’âge adulte</p>
-      <p class="author">Sébastien</p>
+      <p class="author">Sébastien Theillard</p>
     </article>
 
     <article class="book-page back" aria-label="Quatrième de couverture">
       <h3>Cette méthode est-elle faite pour vous&nbsp;?</h3>
       <ul>
         <li><strong>Je veux apprendre à lire la musique seul.</strong> La méthode vous guide étape par étape, sans supposer de connaissances préalables.</li>
-        <li><strong>Je veux une progression claire.</strong> Vous savez quoi apprendre, dans quel ordre, et quand passer à l’étape suivante.</li>
-        <li><strong>Je reconnais les notes… mais trop lentement.</strong> C’est le cœur de la méthode : transformer une connaissance en automatisme.</li>
-        <li><strong>Je veux arrêter de compter les lignes et les interlignes.</strong> L’objectif est de reconnaître directement une note, comme vous reconnaissez une lettre ou un mot.</li>
+        <li><strong>Je reconnais les notes… mais trop lentement.</strong> Le cœur de la méthode est de transformer une connaissance en automatisme.</li>
+        <li><strong>Je veux arrêter de compter les lignes et les interlignes.</strong> L’objectif est de reconnaître directement une note.</li>
         <li><strong>Je veux lire plus vite.</strong> La vitesse est travaillée progressivement, avec des exercices courts et le métronome.</li>
-        <li><strong>Je veux savoir quand augmenter la difficulté.</strong> Chaque étape possède un objectif précis. Vous avancez lorsque la compétence est suffisamment stabilisée.</li>
-        <li><strong>Je veux apprendre progressivement, sans être noyé dans la théorie.</strong> Une notion est introduite lorsqu’elle devient utile, pas simplement parce qu’elle existe.</li>
-        <li><strong>Je veux comprendre ce que je vois sur une partition.</strong> Notes, rythme, altérations, armures et autres éléments sont abordés progressivement pour donner du sens à la lecture.</li>
-        <li><strong>Je veux pouvoir ouvrir une partition sans me sentir perdu.</strong> Le but n’est pas de tout connaître : le but est de savoir quoi regarder et comment le lire.</li>
-        <li><strong>Je veux une méthode conçue pour un adulte débutant.</strong> Pas de prérequis, pas de raccourcis incompréhensibles, pas de progression pensée pour un enfant de conservatoire.</li>
+        <li><strong>Je veux apprendre progressivement, sans être noyé dans la théorie.</strong> Une notion est introduite lorsqu’elle devient utile.</li>
       </ul>
-
       <div class="not">
-        <h4>Et ce que cette méthode ne prétend pas faire</h4>
+        <h4>Ce que cette méthode ne prétend pas faire</h4>
         <ul>
-          <li><strong>Je veux apprendre à jouer d’un instrument.</strong> Cette méthode ne remplace pas un professeur d’instrument ni le travail technique instrumental.</li>
-          <li><strong>Je veux apprendre toute la théorie musicale.</strong> L’harmonie, la composition, l’analyse avancée ou les modes constituent d’autres apprentissages.</li>
-          <li><strong>Je veux apprendre à composer.</strong> Lire et comprendre la notation musicale vous donnera des outils utiles, mais la composition est une discipline à part entière.</li>
-          <li><strong>Je cherche une méthode miracle.</strong> Il n’y en a pas. En revanche, quelques minutes de travail régulier, avec une progression correctement construite, peuvent produire de vrais automatismes.</li>
+          <li>Remplacer un professeur d’instrument ou le travail technique instrumental.</li>
+          <li>Enseigner toute la théorie musicale, l’harmonie ou la composition.</li>
+          <li>Proposer une méthode miracle.</li>
         </ul>
       </div>
-
-      <p class="closing">Vous n’avez peut-être pas besoin « d’apprendre le solfège ». Vous avez peut-être simplement besoin d’apprendre, dans le bon ordre, à lire les notes, lire le rythme et comprendre progressivement le langage écrit de la musique. C’est exactement l’objectif de cette méthode.</p>
+      <p class="closing">Le bêta-test cherche surtout les endroits où la méthode ralentit, bloque ou manque de clarté. Un retour critique et précis est plus utile qu’un simple « c’est très bien ».</p>
     </article>
   </section>
 
   <section class="cta">
-    <p>Après avoir regardé les deux faces du livre, vous pouvez répondre au questionnaire de candidature.</p>
-    <a href="https://airtable.com/appvLqktTeuAAznID/pagiVOg9457gddjXE/form">Participer au bêta-test</a>
+    <p>Le test est gratuit. Les leçons seront transmises progressivement. Après chaque étape, un court questionnaire permettra d’identifier ce qui fonctionne et ce qui doit être corrigé.</p>
+    <a href="https://airtable.com/appvLqktTeuAAznID/pagiVOg9457gddjXE/form">Proposer ma candidature</a>
   </section>
-  <p class="note">Bêta-test gratuit. Le questionnaire sert à sélectionner un groupe varié de lecteurs et à améliorer la méthode.</p>
+  <p class="note">La candidature ne vaut pas sélection automatique. Le groupe sera volontairement limité afin de pouvoir suivre sérieusement les retours.</p>
 </main>
 </body>
 </html>
